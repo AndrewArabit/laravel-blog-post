@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,4 +10,8 @@ Route::get('/', function () {
 
 
 Route::resource("posts", PostController::class)
-->only(['index', 'create']);
+->only(['index', 'show', 'create']);
+
+Route::resource("posts.comments", CommentController::class)
+->scoped(['comment' => 'post'])
+->only(['store']);

@@ -79,13 +79,13 @@
 <body class="container mx-auto mt-10 mb-10 max-w-3xl">
     <nav class="text-red-50 p-4 fixed top-0 left-0 w-full shadow-md bg-white flex flex-wrap justify-between">
         <ul class="flex space-x-4 items-center">
-            <form action="{{ route('posts.create') }}"></form>
+            <form method="GET" action="{{ route('posts.index') }}"></form>
             <li><a href="#" class="text-[#f53003] text-2xl hover:text-red-800">Blog</a></li>
             <li><input type="text" name="" id="" class="input" placeholder="Search..."></li>
             <li>
-                <button class="search-btn">Search</button>
+                <button type="submit" class="search-btn">Search</button>
             </li>
-            <li class="text-[#f53003] font-medium hover:text-red-800">Posts</li>
+            <li class="text-[#f53003] font-medium hover:text-red-800">Create new post!</li>
         </ul>
     </nav>
 

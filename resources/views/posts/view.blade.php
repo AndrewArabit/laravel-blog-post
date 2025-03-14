@@ -11,7 +11,7 @@
               <div
                 class="flex flex-wrap items-center block">
                     <div class="w-full flex-grow sm:w-auto">
-                        <a href="" class="book-title">{{$post->name}}</a>
+                        <a href="{{route('posts.show', [$post])}}" class="book-title">{{$post->name}}</a>
 
                         <span class="block text-gray-700 mb-5">
                            <x-date-formatter :date="$post->created_at"/>
@@ -23,7 +23,7 @@
                                 <p class="text-gray-700 break-words">{{ $post->post }}</p>
                             </div>
                             <div class="flex justify-end text-gray-700" >
-                                <a href="">🗨️ {{ $post->comments_count }} </a>
+                                <a href="{{route('posts.show', [$post])}}">🗨️ {{ $post->comments_count }} </a>
                             </div>
                         </div>
                     </div>
